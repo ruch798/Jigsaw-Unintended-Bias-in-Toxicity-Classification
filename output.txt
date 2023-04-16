@@ -1,0 +1,89 @@
+
+---------- MODEL: bert-base-uncased ----------
+
+
+---------- EPOCH: 1 ----------
+
+AUC Score = 0.9562312264024704
+
+---------- EPOCH: 2 ----------
+
+AUC Score = 0.9457960079282524
+
+---------- EPOCH: 3 ----------
+
+AUC Score = 0.9454847626588478
+
+---------- Model Performance: bert-base-uncased ----------
+
+                        subgroup  subgroup_size  subgroup_auc  bpsn_auc  bnsp_auc
+6                          black             36      0.722222  0.846212  0.929391
+7                          white             64      0.774074  0.837278  0.949603
+0                           male            102      0.869131  0.925346  0.926183
+1                         female            160      0.920000  0.929462  0.954174
+2      homosexual_gay_or_lesbian             36      0.929293  0.868865  0.976140
+5                         muslim             51      0.944444  0.902175  0.969223
+3                      christian            109      0.990476  0.934578  0.991699
+4                         jewish             20      1.000000  0.920869  0.993609
+8  psychiatric_or_mental_illness             10      1.000000  0.957895  0.970776
+Final Metric: 0.9210061071693474
+
+---------- MODEL: roberta-base ----------
+
+
+---------- EPOCH: 1 ----------
+
+AUC Score = 0.6657355184081986
+
+---------- EPOCH: 2 ----------
+
+AUC Score = 0.6914173192836776
+
+---------- EPOCH: 3 ----------
+
+AUC Score = 0.6667568612578005
+
+---------- Model Performance: roberta-base ----------
+
+                        subgroup  subgroup_size  subgroup_auc  bpsn_auc  bnsp_auc
+4                         jewish             20      0.473684  0.599650  0.614934
+5                         muslim             51      0.692593  0.786872  0.585672
+6                          black             36      0.703125  0.782424  0.609423
+0                           male            102      0.715285  0.721771  0.682959
+1                         female            160      0.721839  0.783177  0.629086
+7                          white             64      0.745370  0.732919  0.706976
+2      homosexual_gay_or_lesbian             36      0.772727  0.844697  0.510648
+3                      christian            109      0.782143  0.812822  0.591851
+8  psychiatric_or_mental_illness             10      0.843750  0.842105  0.716472
+Final Metric: 0.6723133966770948
+
+---------- MODEL: distilbert-base-uncased ----------
+
+
+---------- EPOCH: 1 ----------
+
+AUC Score = 0.9562896310967292
+
+---------- EPOCH: 2 ----------
+
+AUC Score = 0.9449628169101552
+
+---------- EPOCH: 3 ----------
+
+AUC Score = 0.9356225016283083
+
+---------- Model Performance: distilbert-base-uncased ----------
+
+                        subgroup  subgroup_size  subgroup_auc  bpsn_auc  bnsp_auc
+6                          black             36      0.812500  0.860606  0.950842
+7                          white             64      0.842593  0.869568  0.953896
+0                           male            102      0.906094  0.929049  0.945203
+2      homosexual_gay_or_lesbian             36      0.909091  0.860329  0.976425
+1                         female            160      0.923218  0.925913  0.960829
+5                         muslim             51      0.944444  0.909846  0.969973
+3                      christian            109      0.980952  0.945448  0.984158
+4                         jewish             20      1.000000  0.918844  0.984448
+8  psychiatric_or_mental_illness             10      1.000000  0.959649  0.981403
+Final Metric: 0.9346879749831075
+
+The best performing model is distilbert-base-uncased with a final metric of 0.9346879749831075
