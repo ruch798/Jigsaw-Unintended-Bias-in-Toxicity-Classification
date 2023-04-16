@@ -1,5 +1,6 @@
 import config
 from model import JigsawModel
+import time
 import transformers
 import torch
 import streamlit as st
@@ -35,14 +36,16 @@ def sentence_prediction(sentence):
     return output[0][0]
 
 def main():
-    st.title("Text Classification")
+    st.title("Toxicity Detection")
     sentence = st.text_input("Enter text:")
-    if st.button("Classify"):
+    if st.button("Detect"):
+        with st.spinner("Analyzing for toxicity..."):
+            time.sleep(3)
         prediction = sentence_prediction(sentence)
         if prediction > 0.5:
-            st.write(f'This text is likely toxic')
+            st.success(f'This text is likely toxic')
         else:
-            st.write(f'This text is likely not toxic')
+            st.success(f'This text is likely not toxic')
 
 if __name__ == "__main__":
     main()
