@@ -1,4 +1,4 @@
-# Jigsaw-Unintended-Bias-in-Toxicity-Classification
+# Jigsaw Unintended Bias in Toxicity Classification
 
 This repository contains code for training and running a toxicity classification system using three different models. The frontend is built using Streamlit.
 
