@@ -11,5 +11,6 @@ model2 = "roberta-base"
 model3 = "distilbert-base-uncased"
 MODEL_DIR = "models/"
 TRAINING_FILE = "data/train.csv"
+TESTING_FILE = "data/test.csv"
 IDENTITY_COLUMNS = ['male', 'female', 'homosexual_gay_or_lesbian', 'christian', 'jewish', 'muslim', 'black', 'white', 'psychiatric_or_mental_illness']
 TOXICITY_COLUMN = 'target'
