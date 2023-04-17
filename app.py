@@ -1,11 +1,8 @@
 import config
 from model import JigsawModel
-import time
 import transformers
 import torch
 import streamlit as st
-
-from transformers import AutoTokenizer, AutoModel
 
 def sentence_prediction(sentence):
     model_name = 'distilbert-base-uncased'
@@ -38,12 +35,15 @@ def sentence_prediction(sentence):
 def main():
     st.title("Toxicity Detection")
     sentence = st.text_input("Enter text:")
+    #  Immigrants don't get deported. ILLEGAL immigrants do.
+    #  You should burn in hell.
+
     if st.button("Detect"):
         with st.spinner("Analyzing for toxicity..."):
-            time.sleep(3)
-        prediction = sentence_prediction(sentence)
+            prediction = sentence_prediction(sentence)
+    
         if prediction > 0.5:
-            st.success(f'This text is likely toxic')
+            st.error(f'This text is likely toxic')
         else:
             st.success(f'This text is likely not toxic')
 
